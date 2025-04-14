@@ -70,7 +70,7 @@ with st.expander("**Current input:**", True):
     st.dataframe(df, hide_index=True, use_container_width=True)
     
 with st.expander("**Predict result:**", True):
-    res = m2.predict_proba(d).flatten().tolist()[1]
+    res = m2.predict_proba(d).flatten().tolist()[0]
     if res < 0.3:
         r = "**:green[Low Risk]**"
         r1 = "Low RisK"
